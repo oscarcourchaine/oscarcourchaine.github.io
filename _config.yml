@@ -1,5 +1,5 @@
 # site settings
-title: Forty
+title: Oscar Courchaine
 subtitle: by HTML5 UP
 email: youremailaddress@gmail.com
 description: A responsive site template designed by HTML5 Up<br /> and released under the Creative Commons.
@@ -22,13 +22,13 @@ tiles-count: 6
 # Icons are not shown if value is empty
 # You need to restart jekyll for changes to have an effect
 socials:
-  GitHub: https://github.com/andrewbanchich
+  GitHub: https://github.com/ocourch
   GitLab:
-  Google-Plus: https://plus.google.com/u/0/+AndrewBanchich
+  Google-Plus:
   Instagram:
-  LinkedIn: https://www.linkedin.com/in/andrew-banchich-a4ba1195
-  Twitter: https://twitter.com/andrewbanchich
-  Facebook:
+  LinkedIn: https://www.linkedin.com/in/oscarcourchaine/
+  Twitter: https://twitter.com/OscarCourchaine
+  Facebook: https://www.facebook.com/search/top/?q=Oscar%20Courchaine
   Slack:
 
 # build settings
