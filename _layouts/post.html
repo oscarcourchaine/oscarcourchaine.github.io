@@ -1,36 +1,51 @@
-<!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-{% include head.html %}
+  {% if page.thumbnail %}
+  <header class="post-header with-thumbnail">
+  {% else %}
+  <header class="post-header">
+  {% endif %}
+    {% if page.thumbnail %}
+    <img class="post-thumbnail" src="/assets/{{ page.thumbnail }}" alt="{{ page.title | escape }}"/>
+    {% endif %}
+    <div class="wrapper">
+      <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {% include _i18n/date.html date=page.date %}
+        </time>
+        {% include _i18n/last_modified_at.html object=page %}
+        {% if page.author %} • 
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+        {% endif %}
+      </p>
+      <h3 class="post-summary">{{ page.summary }}</h3>
+    </div>
+  </header>
 
-<body>
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
 
-    {% include header.html %} 
-    
-    
-<!-- Main -->
-<div id="main" class="alt">
+  {% include calltoaction.html %}
 
-<!-- One -->
-<section id="one">
-	<div class="inner">
-		<header class="major">
-			<h1>{{ page.title }}</h1>
-		</header>
-		{% if page.image %}<span class="image main"><img src="{{ site.baseurl }}/{{ page.image }}" alt="" /></span>{% endif %}
-		{{ content }}
-	</div>
-</section>
+  {% if site.shortbio %}
+  <div class="post-author">
+    {% if site.github_username %}
+      <a href="{% include _i18n/i18n.html value=site.author_website %}">
+        <img class="user-picture" src="https://github.com/{{ site.github_username }}.png" alt="{{ site.author }}">
+      </a>
+    {% endif %}
+      <ul class="user-info">
+        <li class="user-name">
+          {{ site.author }}
+        </li>
+        <li class="user-shortbio">{% include _i18n/i18n.html value=site.shortbio %}</li>
+      </ul>
+  </div>
+  {% endif %}
 
-</div>
-
-    {% include footer.html %}
-
-</body>
-
-</html>
+</article>

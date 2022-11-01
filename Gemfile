@@ -1,7 +1,9 @@
-source 'https://rubygems.org'
-
-gem 'jekyll', '~> 4.2'
+source "https://rubygems.org"
+gemspec
+gem 'jekyll-feed'
+gem 'redcarpet'
 
 group :jekyll_plugins do
-  gem 'jekyll-timeago', '~> 0.13.1'
+  gem 'jekyll-livereload'
+  gem 'jekyll-last-modified-at'
 end

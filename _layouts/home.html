@@ -1,55 +1,31 @@
-<!DOCTYPE html>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+---
+layout: default
+---
 
-{% include head.html %}
+{% assign plang = page.lang | default: site.langs[0] | default: "en" %}
+{% if site.pitch == null %}
+  {% assign div_class = "home" %}
+{% else %}
+  {% assign div_class = "home pitch" %}
+{% endif %}
 
-<body>
+<div class="{{ div_class }}">
+  {% unless site.pitch %}
+  <p>{% include _i18n/i18n.html value=site.description %}</p>
+  {% endunless %}
 
-    {% include header.html %}
+  {{ content }}
 
-    <!-- Banner -->
-    <section id="banner" class="major">
-        <div class="inner">
-            <header class="major">
-                <h1>{{ page.landing-title }}</h1>
-            </header>
-            <div class="content">
-                <p style="text-transform: uppercase;">{{ site.description }}</p>
-                <ul class="actions">
-                    <li><a href="#one" class="button next scrolly">Get Started</a></li>
-                </ul>
-            </div>
-        </div>
-    </section>
+  {% include post-ul.html limit=true %}
 
-    <!-- Main -->
-    <div id="main">
+  {% include calltoaction.html %}
 
-        <!-- One -->
-        {% include tiles.html %}
+  {% assign nb_posts = site.posts | size %}
 
-        <!-- Two -->
-        <section id="two">
-            <div class="inner">
-                <header class="major">
-                    <h2>Massa libero</h2>
-                </header>
-                <p>{{ content }}</p>
-                <ul class="actions">
-                    <li><a href="landing.html" class="button next">Get Started</a></li>
-                </ul>
-            </div>
-        </section>
+  {% if nb_posts > site.nb_posts_page %}
+  <div class="archive">
+    {{ site.data.academic_i18n.all_posts[plang][0] }}
+    <a href="{% include _i18n/link.html path="archive" %}">{{ site.data.academic_i18n.all_posts[plang][1] }}</a>.</div>
+  {% endif %}
 
-    </div>
-
-    {% include footer.html %}
-
-</body>
-
-</html>
+</div>
