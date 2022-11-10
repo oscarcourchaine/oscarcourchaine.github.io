@@ -1,0 +1,25 @@
+body {
+    background-color: $bg-color;
+    color: $text-color;
+    font-family: 'Lato', sans-serif;
+}
+
+.body-container {
+    width: 100%;
+    max-width: $page-max-width;
+    margin: 0 auto;
+    padding: 1em 0 1em 0;
+}
+
+.flex-container {
+    display: flex;
+    padding: 1em 0 1em 0;
+}
+
+.flex-child {
+    flex: 1;
+}
+
+.flex-child:first-child {
+    margin-right: 20px;
+}

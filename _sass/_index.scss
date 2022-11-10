@@ -1,0 +1,40 @@
+.info {
+    line-height: 1.35em;
+}
+
+.links {
+    list-style: none
+}
+
+.c-title {
+    font-weight: 800;
+}
+
+.mainphoto{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-radius: .5em;
+}
+
+.feed {
+    border-top: 1px solid $base;
+}
+
+@media screen and (min-width: $viewport-mobile) {
+    .mainphoto {
+        width: 200px;
+    }
+}
+
+@media screen and (min-width: $viewport-small) {
+    .mainphoto {
+        width: 18em;
+    }
+}
+
+@media screen and (min-width: $viewport-medium) {
+    .mainphoto {
+        width: 300px;
+    }
+}

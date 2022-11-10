@@ -1,24 +1,12 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.langs[0] | default: "en" }}">
+<html>
+{% include head.html %}
 
-  {% include head.html %}
-
-  <body>
-
+<body>
     {% include header.html %}
-
-    {% if page.layout == "post" %}
-    <main class="post-content" aria-label="Content">
-    {% else %}
-    <main class="page-content" aria-label="Content">
-    {% endif %}
-      <div class="wrapper">
+    <div class="body-container">
         {{ content }}
-      </div>
-    </main>
-
+    </div>
     {% include footer.html %}
-
-  </body>
-
+</body>
 </html>

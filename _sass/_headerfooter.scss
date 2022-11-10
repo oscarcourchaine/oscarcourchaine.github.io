@@ -1,0 +1,27 @@
+.header {
+    border-bottom: .15em solid $base;
+    width: auto;
+    max-width: $page-max-width + 100px;
+    margin: 0 auto;
+    padding: 2em 1em 1em 1em;
+    background-color: $accent-bg-color;
+}
+
+.header-title {
+    font-size: 1.25em;
+}
+.header-title a,
+.header-title>a:link,
+.header-title>a:hover {
+    text-decoration: none;
+    color: $accent;
+}
+
+.header-title>a:hover {
+    font-style: italic;
+}
+
+
+.footer {
+    padding: 2em 1em 1em 1em;
+}
