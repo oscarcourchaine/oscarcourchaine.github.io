@@ -10,7 +10,7 @@ layout: default
         <img class="mainphoto" src="../media/oscar.jpeg">
     </div>
     <div class="flex-child info">
-        Oscar (he/him) is an Anthrozoology M.S. student at Canisius College and software developer. He plans to graduate in 2024 and is looking for PhD positions related to animal ethics, conservation, and longtermism. He is interested in the intersection of technology and animal studies and wants to find ethical, respectful, applications for technology in nonhuman animals’ lives.
+        Oscar (he/him) is an Anthrozoology M.S. student at Canisius College and software developer. He plans to graduate in 2024 and is looking for PhD positions related to animal ethics and conservation. He is interested in the intersection of technology and animal studies and wants to find ethical, respectful, applications for technology to improve nonhuman animals’ lives.
         <h3> Contact </h3>
         <ul class="links">
             <li>
