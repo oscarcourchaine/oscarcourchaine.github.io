@@ -10,11 +10,11 @@ layout: default
         <img class="mainphoto" src="../media/oscar.jpeg">
     </div>
     <div class="flex-child info">
-        Oscar (he/him) is an Anthrozoology M.S. student at Canisius College and software developer. He plans to graduate in 2024 and is looking for PhD positions related to animal ethics and conservation. He is interested in the intersection of technology and animal studies and wants to find ethical, respectful, applications for technology to improve nonhuman animals’ lives.
+        Oscar (he/him) is a software developer and recent graduate from Canisius University with his M.S. degree in Anthrozoology. He is interested in the intersection of animal studies and technology and wants to find ethical, respectful, applications for technology to improve nonhuman animals’ lives. He is now looking for PhD positions related to animal ethics, conservation philosophy, and the environmental humanities with a desired start date in 2025. 
         <h3> Contact </h3>
         <ul class="links">
             <li>
-                <span class="c-title"> Email: </span> courchao@canisius.edu
+                <span class="c-title"> Email: </span> oscar.courchaine@gmail.com
             </li>
         </ul>
     </div>
